@@ -65,11 +65,7 @@ class Handler extends ExceptionHandler
 		
 		// Bind JS vars to view
 		config(['javascript.bind_js_vars_to_this_view' => 'errors/layouts/inc/footer']);
-		JavaScript::put([
-			'siteUrl'      => url('/'),
-			'languageCode' => config('app.locale'),
-			'countryCode'  => config('country.code', 0),
-		]);
+	
 	}
 	
 	/**
