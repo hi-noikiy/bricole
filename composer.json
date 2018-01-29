@@ -43,7 +43,8 @@
         "spatie/laravel-backup": "^3.1",
         "torann/laravel-meta-tags": "^3.0",
         "unicodeveloper/laravel-password": "1.0.*",
-        "watson/sitemap": "2.0.*"
+        "watson/sitemap": "2.0.*", 
+		 "ext-gd": "*"
     },
     "require-dev": {
         "filp/whoops": "~2.0",
