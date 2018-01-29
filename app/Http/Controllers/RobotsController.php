@@ -22,7 +22,7 @@ class RobotsController extends FrontController
 {
     public function index()
     {
-        error_reporting(0);
+        error_reporting(E_ALL ^ E_NOTICE);
         $robotsTxt = @file_get_contents('robots.txt');
         
         // Get countries list
