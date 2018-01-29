@@ -611,33 +611,7 @@ class InstallController extends Controller
 				'check' => (extension_loaded('gd') && function_exists('gd_info')),
 				'note'  => 'PHP GD Library is required.',
 			],
-			[
-				'type'  => 'permission',
-				'name'  => 'bootstrap/cache/',
-				'check' => file_exists(base_path('/bootstrap/cache')) &&
-					is_dir(base_path('/bootstrap/cache')) &&
-					(is_writable(base_path('/bootstrap/cache'))) &&
-					getPerms(base_path('/bootstrap/cache')) >= 775,
-				'note'  => 'The directory must be writable by the web server (0775).',
-			],
-			[
-				'type'  => 'permission',
-				'name'  => $userPublicFolder . '/uploads/',
-				'check' => file_exists(base_path('/' . $userPublicFolder . '/uploads')) &&
-					is_dir(base_path('/' . $userPublicFolder . '/uploads')) &&
-					(is_writable(base_path('/' . $userPublicFolder . '/uploads'))) &&
-					getPerms(base_path('/' . $userPublicFolder . '/uploads')) >= 775,
-				'note'  => 'The directory must be writable by the web server (0775).',
-			],
-			[
-				'type'  => 'permission',
-				'name'  => 'storage/',
-				'check' => (file_exists(base_path('/storage')) &&
-						is_dir(base_path('/storage')) &&
-						(is_writable(base_path('/storage'))) &&
-						getPerms(base_path('/storage')) >= 775),
-				'note'  => 'The directory must be writable (recursively) by the web server (0775).',
-			],
+			
 		];
 	}
 	
